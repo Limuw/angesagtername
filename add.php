@@ -44,7 +44,7 @@ $arr = [
 
 
     
-  $sqlInsertRoad = 'INSERT INTO road (id, name, length, xstart, ytart, xend, yend) VALUES ('.idGenerator(0,$road).', \''.$_GET['roadname'].'\', '.$_GET['roadlenght'].','.$_GET['roadxstart'].', '.$_GET['roadystart'].', '.$_GET['roadxend'].', '.$_GET['roadyend'].')';
+  $sqlInsertRoad = 'INSERT INTO road (id, name, length, xstart, ytart, xend, yend) VALUES ('.idGenerator(0,$road).', \''.$_GET['roadname'].'\', '.$_GET['roadlength'].','.$_GET['roadxstart'].', '.$_GET['roadystart'].', '.$_GET['roadxend'].', '.$_GET['roadyend'].')';
   if ($conn->query($sqlInsertRoad) === TRUE) {
     echo json_encode('New record created successfully');
   } else {
