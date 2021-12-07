@@ -49,11 +49,13 @@
                         $sqlSelectRoad = 'SELECT * FROM road';
                         $resultRoad = mysqli_query($conn, $sqlSelectRoad);
                         $road = mysqli_fetch_all($resultRoad);
-
+                        
+                        $str = ""; 
+                        for($i=0; $i<count($road); $i++){
+                        $str.="<option value=".$i.">".implode($road[$i])."</option>";
+                        }
                     ?>
-                    <option value="0"><?php
-                        print_r($road);
-                    ?></option>
+
                 </select>
             </div>
     </div>
