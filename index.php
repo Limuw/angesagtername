@@ -9,9 +9,6 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <div class="container mt-4">
-        
-        <div class="row">
-            <div class="col"> 
                 <h1>Добавление дороги</h1>
         <form action="add.php" method="GET">
             <input type="text" class="form-control" name="roadname" id="roadname" placeholder="Введите название дороги"  autocomplete = "off" required autofocus><br>
@@ -30,7 +27,8 @@
             <button type="reset" class="btn btn-success">Сброс</button>
             <!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
         </form>
-            </div>
+</div>
+                <div>
                 
                     <?php
                         $cleardb_url = parse_url(getenv('CLEARDB_DATABASE_URL'));
@@ -60,6 +58,6 @@
                     
                 
             </div>
-    </div>
+    
 </html>
 
