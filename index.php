@@ -31,7 +31,7 @@
             <!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
         </form>
             </div>
-                <select>
+                
                     <?php
                         $cleardb_url = parse_url(getenv('CLEARDB_DATABASE_URL'));
                         $cleardb_server = $cleardb_url['host'];
@@ -50,14 +50,15 @@
                         $resultRoad = mysqli_query($conn, $sqlSelectRoad);
                         $road = mysqli_fetch_all($resultRoad);
                         
-                        $str = ""; 
+                        $str = "<select>"; 
                         for($i=0; $i<count($road); $i++){
                         $str.="<option value=".$i.">".implode($road[$i]," ")."</option>";
                         }
-                        // return $str;
+                        $str.="</select>";
+                        echo $str;
                     ?>
-                    {$str}
-                </select>
+                    
+                
             </div>
     </div>
 </html>
