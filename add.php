@@ -28,7 +28,7 @@ $cleardb_server = $cleardb_url['host'];
     die('Connection failed: ' . $conn -> connect_error);
   }
 
-  $sql = 'INSERT INTO road (id, name, password, rating, marked, pfp) VALUES ('.$_GET['id'].', \''.$_GET['name'].'\', \''.$_GET['password'].'\','.$_GET['rating'].', '.$_GET['marked'].', '.$_GET['pfp'].')';
+  $sql = 'INSERT INTO road (id, name, length, xstart, ytart, xend, yend) VALUES ('.$_GET['id'].', \''.$_GET['roadname'].'\', \''.$_GET['roadlenght'].'\','.$_GET['roadxstart'].', '.$_GET['roadystart'].', '.$_GET['roadxend'].', '.$_GET['roadyend'].')';
   $result = mysqli_query($conn, $sql);
   $users = mysqli_fetch_all($result);
 
