@@ -27,9 +27,6 @@ $arr = [
     $_GET["customercompany"]]
 ];
 
-
-
-
   function idGenerator ($a, $arr) {
     $temp = [];
       for ($i=0; $i<count($arr); $i++){
@@ -38,18 +35,33 @@ $arr = [
       return in_array($a, $temp) ? idGenerator($a + 1, $arr) : $a;
     }
 
+
+
     $sqlSelectRoad = 'SELECT * FROM road';
     $resultRoad = mysqli_query($conn, $sqlSelectRoad);
     $road = mysqli_fetch_all($resultRoad);
 
+    $sqlInsertRoad = 'INSERT INTO road (id, name, length, xstart, ystart, xend, yend) VALUES ('.idGenerator(0,$road).', \''.$_GET['roadname'].'\', '.$_GET['roadlength'].','.$_GET['roadxstart'].', '.$_GET['roadystart'].', '.$_GET['roadxend'].', '.$_GET['roadyend'].')';
+    if ($conn->query($sqlInsertRoad) === TRUE) {
+        echo json_encode('New record created successfully');
+    } else {
+        echo json_encode('Error: ' . $sqlInsertRoad . '\n' . $conn->error);
+     }
 
-    
-  $sqlInsertRoad = 'INSERT INTO road (id, name, length, xstart, ystart, xend, yend) VALUES ('.idGenerator(0,$road).', \''.$_GET['roadname'].'\', '.$_GET['roadlength'].','.$_GET['roadxstart'].', '.$_GET['roadystart'].', '.$_GET['roadxend'].', '.$_GET['roadyend'].')';
-  if ($conn->query($sqlInsertRoad) === TRUE) {
-    echo json_encode('New record created successfully');
-  } else {
-    echo json_encode('Error: ' . $sqlInsertRoad . '\n' . $conn->error);
-  }
+
+     $sqlSelectRoad = 'SELECT * FROM road';
+    $resultRoad = mysqli_query($conn, $sqlSelectRoad);
+    $road = mysqli_fetch_all($resultRoad);
+
+    $sqlInsertRoad = 'INSERT INTO road (id, name, length, xstart, ystart, xend, yend) VALUES ('.idGenerator(0,$road).', \''.$_GET['roadname'].'\', '.$_GET['roadlength'].','.$_GET['roadxstart'].', '.$_GET['roadystart'].', '.$_GET['roadxend'].', '.$_GET['roadyend'].')';
+    if ($conn->query($sqlInsertRoad) === TRUE) {
+        echo json_encode('New record created successfully');
+    } else {
+        echo json_encode('Error: ' . $sqlInsertRoad . '\n' . $conn->error);
+     }
+  
+
+  
 
 
   

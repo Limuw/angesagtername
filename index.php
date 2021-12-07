@@ -26,12 +26,35 @@
             <input type="email" class="form-control" name="customeremail" id="customeremail" placeholder="customeremail@gmail.com"  autocomplete = "off" required><br>
             <input type="tel" class="form-control" name="customerphone" id="customerphone" placeholder="Введите номер заказчика"  autocomplete = "off" required><br>
             <input type="text" class="form-control" name="customercompany" id="customercompany" placeholder="Введите компанию заказчика"  autocomplete = "off" required><br>
-            <button type="submit" class="btn btn-success">Ввод</button>
+            <button type="submit" class="btn btn-success">Добавить</button>
             <button type="reset" class="btn btn-success">Сброс</button>
             <!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
         </form>
             </div>
-          
+                <select>
+                    <?php
+                        $cleardb_url = parse_url(getenv('CLEARDB_DATABASE_URL'));
+                        $cleardb_server = $cleardb_url['host'];
+                        $cleardb_username = $cleardb_url['user'];
+                        $cleardb_password = $cleardb_url['pass'];
+                        $cleardb_db = substr($cleardb_url['path'],1);
+                        $active_group = 'default';
+                        $query_builder = TRUE;
+                        $conn = mysqli_connect($cleardb_server, $cleardb_username, $cleardb_password, $cleardb_db);
+                        if ($conn -> connect_error) {
+                        echo json_encode('died from cringe  ');
+                        die('Connection failed: ' . $conn -> connect_error);
+                        }
+
+                        $sqlSelectRoad = 'SELECT * FROM road';
+                        $resultRoad = mysqli_query($conn, $sqlSelectRoad);
+                        $road = mysqli_fetch_all($resultRoad);
+
+                    ?>
+                    <option value="0"><?php
+                        print_r($road);
+                    ?></option>
+                </select>
             </div>
     </div>
 </html>
