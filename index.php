@@ -24,8 +24,8 @@
             <input type="text" class="form-control" name="customername" id="customername" placeholder="Введите имя заказчика"  autocomplete = "off" required><br>
             <input type="text" class="form-control" name="customersname" id="customersname" placeholder="Введите фамилию заказчика"  autocomplete = "off" required><br>
             <input type="email" class="form-control" name="customeremail" id="customeremail" placeholder="customeremail@gmail.com"  autocomplete = "off" required><br>
-            <input type="tel" class="form-control" name="customerphone" id="customerphone" placeholder="Введите имя заказчика"  autocomplete = "off" required><br>
-            <input type="text" class="form-control" name="customer" id="customer" placeholder="Введите имя заказчика"  autocomplete = "off" required><br>
+            <input type="tel" class="form-control" name="customerphone" id="customerphone" placeholder="Введите номер заказчика"  autocomplete = "off" required><br>
+            <input type="text" class="form-control" name="customercompany" id="customercompany" placeholder="Введите компанию заказчика"  autocomplete = "off" required><br>
             <button type="submit" class="btn btn-success">Ввод</button>
             <button type="reset" class="btn btn-success">Сброс</button>
             <!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------------- -->

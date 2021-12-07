@@ -11,6 +11,6 @@ $arr = [
     $_GET["customersname"],
     $_GET["customeremail"],
     $_GET["customerphone"],
-    $_GET["customer"]]
+    $_GET["customercompany"]]
 ];
 ?>
