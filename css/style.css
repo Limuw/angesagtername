@@ -11,4 +11,8 @@
 
 #roadyend{
     margin-bottom: 80px !important;
-};
+}
+
+body{
+    display:flex;
+}
