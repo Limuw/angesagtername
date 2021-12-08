@@ -14,5 +14,15 @@
 }
 
 body{
-    display:flex;
+    display:flex !important;
+    padding-left: 30px !important;
+    padding-right: 30px !important;
+}
+
+.container{
+    width: 40% !important;
+}
+
+select{
+    width: 40% !important;
 }
