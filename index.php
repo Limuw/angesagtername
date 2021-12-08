@@ -53,7 +53,8 @@
                             $str.="<option value=".$i.">".$road[$i]."</option>";
                         }
                         $str.="</select>";
-                        echo $str;
+                        echo $road;
+                        echo gettype($road);
                     ?>
                     
                 
