@@ -50,7 +50,7 @@
                         
                         $str = "<select>"; 
                         for($i=0; $i<count($road); $i++){
-                        $str.="<option value=".$i.">".implode($road[$i]," ")."</option>";
+                            $str.="<option value=".$i.">".implode($road[$i]," ")."</option>";
                         }
                         $str.="</select>";
                         echo $str;

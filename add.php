@@ -53,9 +53,9 @@ $arr = [
 
      $sqlSelectCustomer = 'SELECT * FROM customer';
     $resultCustomer = mysqli_query($conn, $sqlCustomerRoad);
-    $road = mysqli_fetch_all($resultRoad);
+    $customer = mysqli_fetch_all($resultCustomer);
 
-    $sqlInsertRoad = 'INSERT INTO road (id, name, length, xstart, ystart, xend, yend) VALUES ('.idGenerator(0,$road).', \''.$_GET['roadname'].'\', '.$_GET['roadlength'].','.$_GET['roadxstart'].', '.$_GET['roadystart'].', '.$_GET['roadxend'].', '.$_GET['roadyend'].')';
+    $sqlInsertCustomer = 'INSERT INTO customer (id, name, length, xstart, ystart, xend, yend) VALUES ('.idGenerator(0,$road).', \''.$_GET['roadname'].'\', '.$_GET['roadlength'].','.$_GET['roadxstart'].', '.$_GET['roadystart'].', '.$_GET['roadxend'].', '.$_GET['roadyend'].')';
     if ($conn->query($sqlInsertRoad) === TRUE) {
         echo json_encode('New record created successfully');
     } else {
