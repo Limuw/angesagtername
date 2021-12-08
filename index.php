@@ -50,12 +50,11 @@
                         
                         $str = "<select>"; 
                         for($i=0; $i<count($road); $i++){
-                            // $str.="<option value=".$i.">".$road[$i]."</option>";
-
-                            echo json_encode($road[$i]);
+                            $str.="<option value=".$i.">".$road[$i][1]."</option>";
+                        
                         }
                         $str.="</select>";
-                        // echo $str;
+                        echo $str;
 
                     ?>
                     
