@@ -49,7 +49,7 @@
         $resultRoad = mysqli_query($conn, $sqlSelectRoad);
         $road = mysqli_fetch_all($resultRoad);
         
-        $str = "<select>"; 
+        $str = "<select style='width: 500px;'>"; 
         for($i=0; $i<count($road); $i++){
             $str.="<option value=".$i.">".$road[$i][1]."</option>";
         
