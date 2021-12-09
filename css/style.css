@@ -18,9 +18,11 @@
 }
 
 body{
-    display:flex !important;
-    padding-left: 30px !important;
-    padding-right: 30px !important;
+    display:flex; 
+    padding-left: 30px; 
+    padding-right: 200px; 
+    column-gap: 50px; 
+    background: '/background.jpg'
 }
 
 .container{
@@ -29,4 +31,10 @@ body{
 
 select{
     width: 40% !important;
+}
+
+.form{
+    padding: 100px; /* Поля */
+    background: #E5D3BD; /* Цвет фона */
+    border: 2px solid #E81E25; /* Параметры рамки */
 }
