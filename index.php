@@ -45,7 +45,6 @@
         die('Connection failed: ' . $conn -> connect_error);
         }
 
-
         $sqlSelectRoad = 'SELECT * FROM road';
         $resultRoad = mysqli_query($conn, $sqlSelectRoad);
         $road = mysqli_fetch_all($resultRoad);
