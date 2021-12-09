@@ -14,39 +14,59 @@ $cleardb_server = $cleardb_url['host'];
 
 $arr = [
     //road
-    [$_GET["roadname"],//название дороги (imp)
-    $_GET["roadlength"],//Общая длина
-    $_GET["roadxstart"],//начало X
-    $_GET["roadystart"],//начало Y
-    $_GET["roadxend"],//конец X
-    $_GET["roadyend"]],//конец  y
+    [
+      $_GET["roadname"],//название дороги (imp)
+      $_GET["roadlength"],//Общая длина
+      $_GET["roadxstart"],//начало X
+      $_GET["roadystart"],//начало Y
+      $_GET["roadxend"],//конец X
+      $_GET["roadyend"]//конец  y
+    ],
     //customer 
-    [$_GET["customername"],//имя
-    $_GET["customersname"],//фамилия
-    $_GET["customeremail"],//почта
-    $_GET["customerphone"],//номер 
-    $_GET["customercompany"]],//компания заказчика
+    [
+      $_GET["customername"],//имя
+      $_GET["customersname"],//фамилия
+      $_GET["customeremail"],//почта
+      $_GET["customerphone"],//номер 
+      $_GET["customercompany"]//компания заказчика
+    ],
     //Object
-    [$_GET["objectnum"],//общее количество
-    $_GET["objectstop"],//остановки
-    $_GET["objectzebra"]],//пешеходные переходы
+    [ 
+      $_GET["objectnum"],//общее количество
+      $_GET["objectstop"],//остановки
+      $_GET["objectzebra"]//пешеходные переходы
+    ],
     //Lcut
-    [$_GET["lcut"]],//largest cut
+    [
+      $_GET["lcut"]//largest cut
+    ],
     //Scut
-    [$_GET["scut"]],//smallest cut
+    [
+      $_GET["scut"]//smallest cut
+    ],
     //Type
-    [$_GET["typecovering"],//тип покрытия
-    $_GET["typeroadside"]],//тип обочины
+    [
+      $_GET["typecovering"],//тип покрытия
+      $_GET["typeroadside"]//тип обочины
+    ],
     //Signs
-    [$_GET["signssum"]],//сумма всех знаков вдоль дороги
+    [
+      $_GET["signssum"]//сумма всех знаков вдоль дороги
+    ],
     //Turn
-    [$_GET["turnamount"]],//количество поворотов
+    [
+      $_GET["turnamount"]//количество поворотов
+    ],
     //Direction
-    $_GET[["directioncity"]],//направление дороги
+    [
+      $_GET["directioncity"]//направление дороги
+    ],
     //Feedback
-    [$_GET["fbnotes"],//заметки пользователя 
-    $_GET["fbmail"],//почта для обратной связи
-    $_GET["fbtel"]]//телефон для обратной связи
+    [
+      $_GET["fbnotes"],//заметки пользователя 
+      $_GET["fbmail"],//почта для обратной связи
+      $_GET["fbtel"]//телефон для обратной связи
+    ]
 ];
 
   function idGenerator ($a, $arr) {
@@ -86,7 +106,7 @@ $arr = [
     $resultObject = mysqli_query($conn, $sqlSelectObject);
     $object = mysqli_fetch_all($resultObject);
 
-    $sqlInsertObject = 'INSERT INTO object (id, num, stop, zebra) VALUES ('.idGenerator(0,$customer).', \''.$_GET['objectnum'].'\', '.$_GET['objectstop'].','.$_GET['objectzebra'].')';
+    $sqlInsertObject = 'INSERT INTO object (id, num, stop, zebra) VALUES ('.idGenerator(0,$object).', \''.$_GET['objectnum'].'\', '.$_GET['objectstop'].','.$_GET['objectzebra'].')';
     if ($conn->query($sqlInsertObject) === TRUE) {
       header('Location: ' . $_SERVER['HTTP_REFERER']);
     } else {
@@ -97,62 +117,62 @@ $arr = [
     $resultLcut = mysqli_query($conn, $sqlSelectLcut);
     $lcut = mysqli_fetch_all($resultLcut);
 
-    $sqlInsertLcut = 'INSERT INTO lcut (id, lcut) VALUES ('.idGenerator(0,$customer).', \''.$_GET['lcut'].')';
+    $sqlInsertLcut = 'INSERT INTO lcut (id, lcut) VALUES ('.idGenerator(0,$lcut).', \''.$_GET['lcut'].')';
     if ($conn->query($sqlInsertLcut) === TRUE) {
       header('Location: ' . $_SERVER['HTTP_REFERER']);
     } else {
         echo json_encode('Error: ' . $sqlInsertLcut . '\n' . $conn->error);
      }
-     //  Scut
-     $sqlSelectCustomer = 'SELECT * FROM customer';
-    $resultCustomer = mysqli_query($conn, $sqlSelectCustomer);
-    $customer = mysqli_fetch_all($resultCustomer);
+     //  Scut+
+     $sqlSelectScut = 'SELECT * FROM scut';
+    $resultScut = mysqli_query($conn, $sqlSelectScut);
+    $scut = mysqli_fetch_all($resultScut);
 
-    $sqlInsertCustomer = 'INSERT INTO customer (id, name, sname, email, phone, company) VALUES ('.idGenerator(0,$customer).', \''.$_GET['customername'].'\', '.$_GET['customersname'].','.$_GET['customeremail'].', '.$_GET['customerphone'].', '.$_GET['customercompany'].')';
-    if ($conn->query($sqlInsertCustomer) === TRUE) {
+    $sqlInsertScut = 'INSERT INTO scut (id, scut) VALUES ('.idGenerator(0,$scut).', \''.$_GET['scut'].')';
+    if ($conn->query($sqlInsertScut) === TRUE) {
       header('Location: ' . $_SERVER['HTTP_REFERER']);
     } else {
-        echo json_encode('Error: ' . $sqlInsertCustomer . '\n' . $conn->error);
+        echo json_encode('Error: ' . $sqlInsertScut . '\n' . $conn->error);
      }
      //  Type
-     $sqlSelectCustomer = 'SELECT * FROM customer';
-    $resultCustomer = mysqli_query($conn, $sqlSelectCustomer);
-    $customer = mysqli_fetch_all($resultCustomer);
+     $sqlSelectType = 'SELECT * FROM type';
+    $resultType = mysqli_query($conn, $sqlSelectType);
+    $type = mysqli_fetch_all($resultType);
 
-    $sqlInsertCustomer = 'INSERT INTO customer (id, name, sname, email, phone, company) VALUES ('.idGenerator(0,$customer).', \''.$_GET['customername'].'\', '.$_GET['customersname'].','.$_GET['customeremail'].', '.$_GET['customerphone'].', '.$_GET['customercompany'].')';
-    if ($conn->query($sqlInsertCustomer) === TRUE) {
+    $sqlInsertType = 'INSERT INTO type (id, covering, roadside) VALUES ('.idGenerator(0,$type).', \''.$_GET['covering'].'\', '.$_GET['roadtype'].')';
+    if ($conn->query($sqlInsertType) === TRUE) {
       header('Location: ' . $_SERVER['HTTP_REFERER']);
     } else {
-        echo json_encode('Error: ' . $sqlInsertCustomer . '\n' . $conn->error);
+        echo json_encode('Error: ' . $sqlInsertType . '\n' . $conn->error);
      }
      //  Signs
-     $sqlSelectCustomer = 'SELECT * FROM customer';
-    $resultCustomer = mysqli_query($conn, $sqlSelectCustomer);
-    $customer = mysqli_fetch_all($resultCustomer);
+     $sqlSelectSigns = 'SELECT * FROM signs';
+    $resultSigns = mysqli_query($conn, $sqlSelectSigns);
+    $signs = mysqli_fetch_all($resultSigns);
 
-    $sqlInsertCustomer = 'INSERT INTO customer (id, name, sname, email, phone, company) VALUES ('.idGenerator(0,$customer).', \''.$_GET['customername'].'\', '.$_GET['customersname'].','.$_GET['customeremail'].', '.$_GET['customerphone'].', '.$_GET['customercompany'].')';
-    if ($conn->query($sqlInsertCustomer) === TRUE) {
+    $sqlInsertSigns = 'INSERT INTO signs (id, sum) VALUES ('.idGenerator(0,$signs).', \''.$_GET['sum'].')';
+    if ($conn->query($sqlInsertSigns) === TRUE) {
       header('Location: ' . $_SERVER['HTTP_REFERER']);
     } else {
-        echo json_encode('Error: ' . $sqlInsertCustomer . '\n' . $conn->error);
+        echo json_encode('Error: ' . $sqlInsertSigns . '\n' . $conn->error);
      }
      //  Turn
-     $sqlSelectCustomer = 'SELECT * FROM customer';
-    $resultCustomer = mysqli_query($conn, $sqlSelectCustomer);
-    $customer = mysqli_fetch_all($resultCustomer);
+     $sqlSelectTurn = 'SELECT * FROM turn';
+    $resultTurn = mysqli_query($conn, $sqlSelectTurn);
+    $turn = mysqli_fetch_all($resultTurn);
 
-    $sqlInsertCustomer = 'INSERT INTO customer (id, name, sname, email, phone, company) VALUES ('.idGenerator(0,$customer).', \''.$_GET['customername'].'\', '.$_GET['customersname'].','.$_GET['customeremail'].', '.$_GET['customerphone'].', '.$_GET['customercompany'].')';
-    if ($conn->query($sqlInsertCustomer) === TRUE) {
+    $sqlInsertTurn = 'INSERT INTO turn (id, amount) VALUES ('.idGenerator(0,$turn).', \''.$_GET['amount'].')';
+    if ($conn->query($sqlInsertTurn) === TRUE) {
       header('Location: ' . $_SERVER['HTTP_REFERER']);
     } else {
-        echo json_encode('Error: ' . $sqlInsertCustomer . '\n' . $conn->error);
+        echo json_encode('Error: ' . $sqlInsertTurn . '\n' . $conn->error);
      }
      //  Direction
-     $sqlSelectCustomer = 'SELECT * FROM customer';
-    $resultCustomer = mysqli_query($conn, $sqlSelectCustomer);
-    $customer = mysqli_fetch_all($resultCustomer);
+     $sqlSelectDirection = 'SELECT * FROM direction';
+    $resultDirection = mysqli_query($conn, $sqlSelectDirection);
+    $direction = mysqli_fetch_all($resultDirection);
 
-    $sqlInsertCustomer = 'INSERT INTO customer (id, name, sname, email, phone, company) VALUES ('.idGenerator(0,$customer).', \''.$_GET['customername'].'\', '.$_GET['customersname'].','.$_GET['customeremail'].', '.$_GET['customerphone'].', '.$_GET['customercompany'].')';
+    $sqlInsertDirection = 'INSERT INTO di (id, name, sname, email, phone, company) VALUES ('.idGenerator(0,$customer).', \''.$_GET['customername'].'\', '.$_GET['customersname'].','.$_GET['customeremail'].', '.$_GET['customerphone'].', '.$_GET['customercompany'].')';
     if ($conn->query($sqlInsertCustomer) === TRUE) {
       header('Location: ' . $_SERVER['HTTP_REFERER']);
     } else {
