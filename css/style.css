@@ -18,11 +18,10 @@
 }
 
 body{
-    display:flex; 
-    padding-left: 30px; 
-    padding-right: 200px; 
-    column-gap: 50px; 
-    background: '/background.jpg'
+    display:flex !important;
+    padding-left: 30px !important;
+    padding-right: 30px !important;
+    background: '/background.jpg' !important;
 }
 
 .container{
@@ -34,7 +33,6 @@ select{
 }
 
 .form{
-    padding: 100px; /* Поля */
-    background: #E5D3BD; /* Цвет фона */
-    border: 2px solid #E81E25; /* Параметры рамки */
+    background: #E5D3BD !important; /* Цвет фона */
+    border: 2px solid #E81E25 !important; /* Параметры рамки */
 }
