@@ -32,8 +32,8 @@ VANTA.NET({
 </head>
 <body style="display:flex; padding-left: 30px; padding-right: 200px; column-gap: 50px;">
 
-<header>
-    <width="200" height="200" id="header">
+<header id="header">
+    <width="200" height="200">
         <h1>Добро пожаловать на сайт</h1>
 </header>
 
