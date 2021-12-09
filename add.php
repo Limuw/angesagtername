@@ -157,7 +157,7 @@ $arr = [
     $resultDirection = mysqli_query($conn, $sqlSelectDirection);
     $direction = mysqli_fetch_all($resultDirection);
 
-    $sqlInsertDirection = 'INSERT INTO di (id, name, sname, email, phone, company) VALUES ('.idGenerator(0,$customer).', \''.$_GET['customername'].'\', '.$_GET['customersname'].','.$_GET['customeremail'].', '.$_GET['customerphone'].', '.$_GET['customercompany'].')';
+    $sqlInsertDirection = 'INSERT INTO di (id, name, sname, email, phone, company) VALUES ('.idGenerator(0,$customer).', \''.$_GET['customername'].'\', '.$_GET['customersname'].',\''.$_GET['customeremail'].'\', '.$_GET['customerphone'].', '.$_GET['customercompany'].')';
     if ($conn->query($sqlInsertCustomer) === FALSE) {
         echo json_encode('Error: ' . $sqlInsertCustomer . '\n' . $conn->error);
      }
