@@ -8,33 +8,9 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body style="display:flex; padding-left: 30px; padding-right: 200px; column-gap: 50px;">
+<body style="display:flex; padding-left: 30px; padding-right: 200px; column-gap: 50px; background: '/background.jpg'">
 
 
-<script src="vanta.dots.min.js"></script>
-<script src="three.r119.min.js"></script>
-<script src="vanta.net.min.js"></script>
-<script>
-VANTA.NET({
-  el: "#header",
-  mouseControls: true,
-  touchControls: true,
-  gyroControls: false,
-  minHeight: 200.00,
-  minWidth: 200.00,
-  scale: 1.00,
-  scaleMobile: 1.00,
-  color: 0xfffe3f,
-  backgroundColor: 0x0,
-  maxDistance: 23.00
-})
-</script>
-
-
-<header id="header">
-    <width="200" height="200">
-        <h1>Добро пожаловать на сайт</h1>
-</header>
 
 <div class="container mt-4">
     <h1>Добавление дороги</h1>
@@ -56,9 +32,25 @@ VANTA.NET({
         <input type="number" class="form-control" name="objectnum" id="objectnum" placeholder="Введите количество объектов вдоль дороги"  autocomplete = "off" required><br>
         <input type="number" class="form-control" name="objectstop" id="objectstop" placeholder="Введите количество остановок вдоль дороги"  autocomplete = "off" required><br>
         <input type="number" class="form-control" name="objectzebra" id="objectzebra" placeholder="Введите количество переходов вдоль дороги"  autocomplete = "off" required><br>
-        <button type="submit" class="btn btn-success">Добавить</button>
-        <button type="reset" class="btn btn-success">Сброс</button>
+        <!-- Largest cut---------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+        <input type="number" class="form-control" name="lcut" id="lcut" placeholder="Введите длинну самого большого отрезка"  autocomplete = "off" required><br>
+        <!-- Smallest cut---------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+        <input type="number" class="form-control" name="scut" id="scut" placeholder="Введите длинну самого маленького отрезка"  autocomplete = "off" required><br>
+        <!-- Type---------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+        <input type="text" class="form-control" name="typecovering" id="typecovering" placeholder="Введите материал дороги"  autocomplete = "off" required><br>
+        <input type="text" class="form-control" name="typeroadside" id="typeroadside" placeholder="Введите материал обочины"  autocomplete = "off" required><br>
         <!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+        <input type="number" class="form-control" name="objectnum" id="objectnum" placeholder="Введите количество объектов вдоль дороги"  autocomplete = "off" required><br>
+        <input type="number" class="form-control" name="objectstop" id="objectstop" placeholder="Введите количество остановок вдоль дороги"  autocomplete = "off" required><br>
+        <input type="number" class="form-control" name="objectzebra" id="objectzebra" placeholder="Введите количество переходов вдоль дороги"  autocomplete = "off" required><br>
+        <!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+        <input type="number" class="form-control" name="objectnum" id="objectnum" placeholder="Введите количество объектов вдоль дороги"  autocomplete = "off" required><br>
+        <input type="number" class="form-control" name="objectstop" id="objectstop" placeholder="Введите количество остановок вдоль дороги"  autocomplete = "off" required><br>
+        <input type="number" class="form-control" name="objectzebra" id="objectzebra" placeholder="Введите количество переходов вдоль дороги"  autocomplete = "off" required><br>
+        <!-- Feedback---------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+        <input type="text" class="form-control" name="fbnotes" id="fbnotes" placeholder="Примечание для обратной связи"  autocomplete = "off" required><br>
+        <input type="email" class="form-control" name="fbmail" id="fbmail" placeholder="feedback@gmail.com"  autocomplete = "off" required><br>
+        <input type="tel" class="form-control" name="fbtel" id="fbtel" placeholder="Введите телефон для обратной связи"  autocomplete = "off" required><br>
     </form>
 </div>
 <div>
@@ -84,7 +76,7 @@ VANTA.NET({
         $str = "<select style='width: 500px; margin-top: 45px;'>"; 
         for($i=0; $i<count($road); $i++){
             $str.="<option value=".$i.">".$road[$i][1].
-                "<form action='output.php'><input name='roadname' value=".$road[$i][1]." style='visibility: hidden'><button type='submit'>Открыть информацию о дороге</form>".
+                "<form action='output.php'><input name='roadname' value=".$road[$i][1]." style='visibility: hidden'><button type='submit'>Открыть информацию о дороге</button></form>".
             "</option>";
         
         }
