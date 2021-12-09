@@ -47,8 +47,3 @@ body{
 select{
     width: 40% !important;
 }
-
-.form{
-    background: #E5D3BD !important; /* Цвет фона */
-    border: 2px solid #E81E25 !important; /* Параметры рамки */
-}
