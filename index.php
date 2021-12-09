@@ -7,12 +7,12 @@
     <title>Учет дорог</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
+</head>
+<body style="display:flex; padding-left: 30px; padding-right: 200px; column-gap: 50px;">
 
 
-    <script src="vanta.dots.min.js"></script>
-    
-
-    <script src="three.r119.min.js"></script>
+<script src="vanta.dots.min.js"></script>
+<script src="three.r119.min.js"></script>
 <script src="vanta.net.min.js"></script>
 <script>
 VANTA.NET({
@@ -29,8 +29,7 @@ VANTA.NET({
   maxDistance: 23.00
 })
 </script>
-</head>
-<body style="display:flex; padding-left: 30px; padding-right: 200px; column-gap: 50px;">
+
 
 <header id="header">
     <width="200" height="200">
