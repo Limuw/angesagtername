@@ -51,6 +51,8 @@
         <input type="text" class="form-control" name="fbnotes" id="fbnotes" placeholder="Примечание для обратной связи"  autocomplete = "off" required><br>
         <input type="email" class="form-control" name="fbmail" id="fbmail" placeholder="feedback@gmail.com"  autocomplete = "off" required><br>
         <input type="tel" class="form-control" name="fbtel" id="fbtel" placeholder="Введите телефон для обратной связи"  autocomplete = "off" required><br>
+        <button class="btn btn-success">Добавить</button>
+        <input class="btn btn-success"type="reset">
     </form>
 </div>
 <div>
