@@ -73,14 +73,11 @@
         $resultRoad = mysqli_query($conn, $sqlSelectRoad);
         $road = mysqli_fetch_all($resultRoad);
         
-        $str = "<select style='width: 500px; margin-top: 45px;'>"; 
+        $str = ""; 
         for($i=0; $i<count($road); $i++){
-            $str.="<option value=".$i.">".$road[$i][1].
-                "<form action='output.php'><input name='roadname' value=".$road[$i][1]." style='visibility: hidden; width: 0px;'><button type='submit'>Открыть информацию о дороге</button></form>".
-            "</option>";
+            $str.="<form action='output.php'>".$road[$i][1]."<input name='roadname' value=".$road[$i][1]." style='visibility: hidden; width: 0px;'><button type='submit'>Открыть информацию о дороге</button></form><hr>";
         
         }
-        $str.="</select>";
         echo $str;
     ?>
 </div>
