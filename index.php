@@ -7,23 +7,29 @@
     <title>Учет дорог</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel=”icon” href=”/road.png” type=”image/x-icon”>.
 </head>
 <body style="display:flex; padding-left: 30px; padding-right: 200px; column-gap: 50px;">
 <div class="container mt-4">
     <h1>Добавление дороги</h1>
     <form action="add.php" method="GET">
+        <!-- Road---------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
         <input type="text" class="form-control" name="roadname" id="roadname" placeholder="Введите название дороги"  autocomplete = "off" required autofocus><br>
         <input type="number" class="form-control" name="roadlength" id="roadlength" placeholder="Введите длину дороги"  autocomplete = "off" required><br>
         <input type="number" class="form-control" name="roadxstart" id="roadxstart" placeholder="Введите X координату начальной точки дороги"  autocomplete = "off" required><br>
         <input type="number" class="form-control" name="roadystart" id="roadystart" placeholder="Введите Y координату начальной точки дороги"  autocomplete = "off" required><br>
         <input type="number" class="form-control" name="roadxend" id="roadxend" placeholder="Введите X координату конечной точки дороги"  autocomplete = "off" required><br>
         <input type="number" class="form-control" name="roadyend" id="roadyend" placeholder="Введите Y координату конечной точки дороги"  autocomplete = "off" required><br>
-        <!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+        <!-- Customer---------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
         <input type="text" class="form-control" name="customername" id="customername" placeholder="Введите имя заказчика"  autocomplete = "off" required><br>
         <input type="text" class="form-control" name="customersname" id="customersname" placeholder="Введите фамилию заказчика"  autocomplete = "off" required><br>
         <input type="email" class="form-control" name="customeremail" id="customeremail" placeholder="customeremail@gmail.com"  autocomplete = "off" required><br>
         <input type="tel" class="form-control" name="customerphone" id="customerphone" placeholder="Введите номер заказчика"  autocomplete = "off" required><br>
         <input type="text" class="form-control" name="customercompany" id="customercompany" placeholder="Введите компанию заказчика"  autocomplete = "off" required><br>
+        <!-- Object---------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+        <input type="number" class="form-control" name="objectnum" id="objectnum" placeholder="Введите количество объектов вдоль дороги"  autocomplete = "off" required><br>
+        <input type="number" class="form-control" name="objectstop" id="objectstop" placeholder="Введите количество остановок вдоль дороги"  autocomplete = "off" required><br>
+        <input type="number" class="form-control" name="objectzebra" id="objectzebra" placeholder="Введите количество переходов вдоль дороги"  autocomplete = "off" required><br>
         <button type="submit" class="btn btn-success">Добавить</button>
         <button type="reset" class="btn btn-success">Сброс</button>
         <!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
