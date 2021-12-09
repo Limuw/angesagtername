@@ -52,14 +52,14 @@ $arr = [
 
 
      $sqlSelectCustomer = 'SELECT * FROM customer';
-    $resultCustomer = mysqli_query($conn, $sqlCustomerRoad);
+    $resultCustomer = mysqli_query($conn, $sqlSelectCustomer);
     $customer = mysqli_fetch_all($resultCustomer);
 
-    $sqlInsertCustomer = 'INSERT INTO customer (id, name, length, xstart, ystart, xend, yend) VALUES ('.idGenerator(0,$road).', \''.$_GET['roadname'].'\', '.$_GET['roadlength'].','.$_GET['roadxstart'].', '.$_GET['roadystart'].', '.$_GET['roadxend'].', '.$_GET['roadyend'].')';
-    if ($conn->query($sqlInsertRoad) === TRUE) {
+    $sqlInsertCustomer = 'INSERT INTO customer (id, name, sname, email, phone, company) VALUES ('.idGenerator(0,$customer).', \''.$_GET['customername'].'\', '.$_GET['customersname'].','.$_GET['customeremail'].', '.$_GET['customerphone'].', '.$_GET['customercompany'].')';
+    if ($conn->query($sqlInsertCustomer) === TRUE) {
       header('Location: ' . $_SERVER['HTTP_REFERER']);
     } else {
-        echo json_encode('Error: ' . $sqlInsertRoad . '\n' . $conn->error);
+        echo json_encode('Error: ' . $sqlInsertCustomer . '\n' . $conn->error);
      }
   
 
