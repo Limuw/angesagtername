@@ -32,27 +32,25 @@
         <input type="number" class="form-control" name="objectnum" id="objectnum" placeholder="Введите количество объектов вдоль дороги"  autocomplete = "off" required><br>
         <input type="number" class="form-control" name="objectstop" id="objectstop" placeholder="Введите количество остановок вдоль дороги"  autocomplete = "off" required><br>
         <input type="number" class="form-control" name="objectzebra" id="objectzebra" placeholder="Введите количество переходов вдоль дороги"  autocomplete = "off" required><br>
-        <!-- Largest cut---------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+        <!-- Lcut---------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
         <input type="number" class="form-control" name="lcut" id="lcut" placeholder="Введите длинну самого большого отрезка"  autocomplete = "off" required><br>
-        <!-- Smallest cut---------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+        <!-- Scut---------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
         <input type="number" class="form-control" name="scut" id="scut" placeholder="Введите длинну самого маленького отрезка"  autocomplete = "off" required><br>
         <!-- Type---------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
         <input type="text" class="form-control" name="typecovering" id="typecovering" placeholder="Введите материал дороги"  autocomplete = "off" required><br>
         <input type="text" class="form-control" name="typeroadside" id="typeroadside" placeholder="Введите материал обочины"  autocomplete = "off" required><br>
-        <!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
-        <input type="number" class="form-control" name="objectnum" id="objectnum" placeholder="Введите количество объектов вдоль дороги"  autocomplete = "off" required><br>
-        <input type="number" class="form-control" name="objectstop" id="objectstop" placeholder="Введите количество остановок вдоль дороги"  autocomplete = "off" required><br>
-        <input type="number" class="form-control" name="objectzebra" id="objectzebra" placeholder="Введите количество переходов вдоль дороги"  autocomplete = "off" required><br>
-        <!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
-        <input type="number" class="form-control" name="objectnum" id="objectnum" placeholder="Введите количество объектов вдоль дороги"  autocomplete = "off" required><br>
-        <input type="number" class="form-control" name="objectstop" id="objectstop" placeholder="Введите количество остановок вдоль дороги"  autocomplete = "off" required><br>
-        <input type="number" class="form-control" name="objectzebra" id="objectzebra" placeholder="Введите количество переходов вдоль дороги"  autocomplete = "off" required><br>
+        <!-- Signs---------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+        <input type="number" class="form-control" name="signssum" id="signssum" placeholder="Введите количество знаков вдоль дороги"  autocomplete = "off" required><br>
+        <!-- Turn---------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+        <input type="number" class="form-control" name="turnamount" id="turnamount" placeholder="Введите количество поворотов вдоль дороги"  autocomplete = "off" required><br>
+        <!-- Direction---------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+        <input type="text" class="form-control" name="directioncity" id="directioncity" placeholder="Введите направление дороги"  autocomplete = "off" required><br>
         <!-- Feedback---------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
         <input type="text" class="form-control" name="fbnotes" id="fbnotes" placeholder="Примечание для обратной связи"  autocomplete = "off" required><br>
         <input type="email" class="form-control" name="fbmail" id="fbmail" placeholder="feedback@gmail.com"  autocomplete = "off" required><br>
         <input type="tel" class="form-control" name="fbtel" id="fbtel" placeholder="Введите телефон для обратной связи"  autocomplete = "off" required><br>
         <button class="btn btn-success">Добавить</button>
-        <input class="btn btn-success"type="reset">
+        <input class="btn btn-danger"type="reset">
     </form>
 </div>
 <div>

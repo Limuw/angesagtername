@@ -22,7 +22,6 @@
         die('Connection failed: ' . $conn -> connect_error);
         }
 
-
         $sqlSelectRoad = 'SELECT * FROM road WHERE roadname='.$_GET['roadname'].'';
         $resultRoad = mysqli_query($conn, $sqlSelectRoad);
         $road = mysqli_fetch_all($resultRoad);
@@ -30,7 +29,7 @@
     ?>
 <body style="display:flex; padding-left: 30px; padding-right: 200px; column-gap: 50px;">
 <div class="container mt-4">
-    <h1>Инфа)</h1>
+    <h1>Информация о дороге</h1>
         <label><?php $road[0] ?></label><br>
         <label><?php $road[1] ?></label><br>
         <label><?php $road[2] ?></label><br>

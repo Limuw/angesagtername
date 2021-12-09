@@ -36,7 +36,7 @@ $arr = [
     }
 
 
-
+    //  Road+
     $sqlSelectRoad = 'SELECT * FROM road';
     $resultRoad = mysqli_query($conn, $sqlSelectRoad);
     $road = mysqli_fetch_all($resultRoad);
@@ -48,9 +48,7 @@ $arr = [
         echo json_encode('Error: ' . $sqlInsertRoad . '\n' . $conn->error);
      }
 
-
-
-
+    //  Customer+
      $sqlSelectCustomer = 'SELECT * FROM customer';
     $resultCustomer = mysqli_query($conn, $sqlSelectCustomer);
     $customer = mysqli_fetch_all($resultCustomer);
@@ -61,17 +59,92 @@ $arr = [
     } else {
         echo json_encode('Error: ' . $sqlInsertCustomer . '\n' . $conn->error);
      }
-  
+     //  Object
+     $sqlSelectCustomer = 'SELECT * FROM customer';
+    $resultCustomer = mysqli_query($conn, $sqlSelectCustomer);
+    $customer = mysqli_fetch_all($resultCustomer);
 
-  
+    $sqlInsertCustomer = 'INSERT INTO customer (id, name, sname, email, phone, company) VALUES ('.idGenerator(0,$customer).', \''.$_GET['customername'].'\', '.$_GET['customersname'].','.$_GET['customeremail'].', '.$_GET['customerphone'].', '.$_GET['customercompany'].')';
+    if ($conn->query($sqlInsertCustomer) === TRUE) {
+      header('Location: ' . $_SERVER['HTTP_REFERER']);
+    } else {
+        echo json_encode('Error: ' . $sqlInsertCustomer . '\n' . $conn->error);
+     }
+     //  Lcut
+     $sqlSelectCustomer = 'SELECT * FROM customer';
+    $resultCustomer = mysqli_query($conn, $sqlSelectCustomer);
+    $customer = mysqli_fetch_all($resultCustomer);
 
+    $sqlInsertCustomer = 'INSERT INTO customer (id, name, sname, email, phone, company) VALUES ('.idGenerator(0,$customer).', \''.$_GET['customername'].'\', '.$_GET['customersname'].','.$_GET['customeremail'].', '.$_GET['customerphone'].', '.$_GET['customercompany'].')';
+    if ($conn->query($sqlInsertCustomer) === TRUE) {
+      header('Location: ' . $_SERVER['HTTP_REFERER']);
+    } else {
+        echo json_encode('Error: ' . $sqlInsertCustomer . '\n' . $conn->error);
+     }
+     //  Scut
+     $sqlSelectCustomer = 'SELECT * FROM customer';
+    $resultCustomer = mysqli_query($conn, $sqlSelectCustomer);
+    $customer = mysqli_fetch_all($resultCustomer);
 
-  
+    $sqlInsertCustomer = 'INSERT INTO customer (id, name, sname, email, phone, company) VALUES ('.idGenerator(0,$customer).', \''.$_GET['customername'].'\', '.$_GET['customersname'].','.$_GET['customeremail'].', '.$_GET['customerphone'].', '.$_GET['customercompany'].')';
+    if ($conn->query($sqlInsertCustomer) === TRUE) {
+      header('Location: ' . $_SERVER['HTTP_REFERER']);
+    } else {
+        echo json_encode('Error: ' . $sqlInsertCustomer . '\n' . $conn->error);
+     }
+     //  Type
+     $sqlSelectCustomer = 'SELECT * FROM customer';
+    $resultCustomer = mysqli_query($conn, $sqlSelectCustomer);
+    $customer = mysqli_fetch_all($resultCustomer);
 
+    $sqlInsertCustomer = 'INSERT INTO customer (id, name, sname, email, phone, company) VALUES ('.idGenerator(0,$customer).', \''.$_GET['customername'].'\', '.$_GET['customersname'].','.$_GET['customeremail'].', '.$_GET['customerphone'].', '.$_GET['customercompany'].')';
+    if ($conn->query($sqlInsertCustomer) === TRUE) {
+      header('Location: ' . $_SERVER['HTTP_REFERER']);
+    } else {
+        echo json_encode('Error: ' . $sqlInsertCustomer . '\n' . $conn->error);
+     }
+     //  Signs
+     $sqlSelectCustomer = 'SELECT * FROM customer';
+    $resultCustomer = mysqli_query($conn, $sqlSelectCustomer);
+    $customer = mysqli_fetch_all($resultCustomer);
 
+    $sqlInsertCustomer = 'INSERT INTO customer (id, name, sname, email, phone, company) VALUES ('.idGenerator(0,$customer).', \''.$_GET['customername'].'\', '.$_GET['customersname'].','.$_GET['customeremail'].', '.$_GET['customerphone'].', '.$_GET['customercompany'].')';
+    if ($conn->query($sqlInsertCustomer) === TRUE) {
+      header('Location: ' . $_SERVER['HTTP_REFERER']);
+    } else {
+        echo json_encode('Error: ' . $sqlInsertCustomer . '\n' . $conn->error);
+     }
+     //  Turn
+     $sqlSelectCustomer = 'SELECT * FROM customer';
+    $resultCustomer = mysqli_query($conn, $sqlSelectCustomer);
+    $customer = mysqli_fetch_all($resultCustomer);
 
-  
+    $sqlInsertCustomer = 'INSERT INTO customer (id, name, sname, email, phone, company) VALUES ('.idGenerator(0,$customer).', \''.$_GET['customername'].'\', '.$_GET['customersname'].','.$_GET['customeremail'].', '.$_GET['customerphone'].', '.$_GET['customercompany'].')';
+    if ($conn->query($sqlInsertCustomer) === TRUE) {
+      header('Location: ' . $_SERVER['HTTP_REFERER']);
+    } else {
+        echo json_encode('Error: ' . $sqlInsertCustomer . '\n' . $conn->error);
+     }
+     //  Direction
+     $sqlSelectCustomer = 'SELECT * FROM customer';
+    $resultCustomer = mysqli_query($conn, $sqlSelectCustomer);
+    $customer = mysqli_fetch_all($resultCustomer);
 
+    $sqlInsertCustomer = 'INSERT INTO customer (id, name, sname, email, phone, company) VALUES ('.idGenerator(0,$customer).', \''.$_GET['customername'].'\', '.$_GET['customersname'].','.$_GET['customeremail'].', '.$_GET['customerphone'].', '.$_GET['customercompany'].')';
+    if ($conn->query($sqlInsertCustomer) === TRUE) {
+      header('Location: ' . $_SERVER['HTTP_REFERER']);
+    } else {
+        echo json_encode('Error: ' . $sqlInsertCustomer . '\n' . $conn->error);
+     }
+     //  Feedback
+     $sqlSelectCustomer = 'SELECT * FROM customer';
+    $resultCustomer = mysqli_query($conn, $sqlSelectCustomer);
+    $customer = mysqli_fetch_all($resultCustomer);
 
-
+    $sqlInsertCustomer = 'INSERT INTO customer (id, name, sname, email, phone, company) VALUES ('.idGenerator(0,$customer).', \''.$_GET['customername'].'\', '.$_GET['customersname'].','.$_GET['customeremail'].', '.$_GET['customerphone'].', '.$_GET['customercompany'].')';
+    if ($conn->query($sqlInsertCustomer) === TRUE) {
+      header('Location: ' . $_SERVER['HTTP_REFERER']);
+    } else {
+        echo json_encode('Error: ' . $sqlInsertCustomer . '\n' . $conn->error);
+     }
 ?>
