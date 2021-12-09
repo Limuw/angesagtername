@@ -7,9 +7,35 @@
     <title>Учет дорог</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel=”icon” href=”/road.png” type=”image/x-icon”>.
+
+
+    <script src="vanta.dots.min.js"></script>
+    
+
+    <script src="three.r119.min.js"></script>
+<script src="vanta.net.min.js"></script>
+<script>
+VANTA.NET({
+  el: "#header",
+  mouseControls: true,
+  touchControls: true,
+  gyroControls: false,
+  minHeight: 200.00,
+  minWidth: 200.00,
+  scale: 1.00,
+  scaleMobile: 1.00,
+  color: 0xfffe3f,
+  backgroundColor: 0x0,
+  maxDistance: 23.00
+})
+</script>
 </head>
 <body style="display:flex; padding-left: 30px; padding-right: 200px; column-gap: 50px;">
+
+<header>
+    <width="100" height="100">
+</header>
+
 <div class="container mt-4">
     <h1>Добавление дороги</h1>
     <form action="add.php" method="GET">
