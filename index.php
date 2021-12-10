@@ -84,7 +84,7 @@
         $resultRoad = mysqli_query($conn, $sqlSelectRoad);
         $road = mysqli_fetch_all($resultRoad);
         
-        $str = '<div style="background: rgba(110,85,132,0.58); margin: 20px 20px; padding: 20px; border-radius: 10px; backdrop-filter: blur(5px);>'; 
+        $str = '<div style="background: rgba(110,85,132,0.58); margin: 20px 20px; padding: 20px; border-radius: 10px; backdrop-filter: blur(5px);">'; 
         for($i=0; $i<count($road); $i++){
             $str.="<form action='output.php'>".$road[$i][1]."<input name='roadname' value=".$road[$i][1]." style='visibility: hidden; width: 0px;'><button type='submit'>Открыть информацию о дороге</button></form><hr>";
         
