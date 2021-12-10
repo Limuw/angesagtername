@@ -13,13 +13,13 @@
     background-size: 100% !important;
     background-repeat: no-repeat !important;
     background-attachment: fixed !important;
-    background-position: 0 0; !important">
+    background-position: 0 0 !important">
 
 
 
 <div class="container mt-4">
     
-    <form action="add.php" method="GET" style="background: rgba(110,85,132,0.58); padding-left: 20px; padding-right: 20px; border-radius: 10px; backdrop-filter: blur(7px); ">
+    <form action="add.php" method="GET" style="background: rgba(110,85,132,0.58); padding-left: 20px; padding-right: 20px; border-radius: 10px; backdrop-filter: blur(5px); ">
         <!-- Road---------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
         <h1 style="color: #fff">Добавление дороги</h1>
         <h3 style="color: #fff">Основная информация</h3>
@@ -86,7 +86,7 @@
         
         $str = ""; 
         for($i=0; $i<count($road); $i++){
-            $str.="<form action='output.php'>".$road[$i][1]."<input name='roadname' value=".$road[$i][1]." style='visibility: hidden; width: 0px;'><button type='submit'>Открыть информацию о дороге</button></form><hr>";
+            $str.="<form action='output.php' style='background: rgba(110,85,132,0.58); padding-left: 20px; padding-right: 20px; border-radius: 10px; backdrop-filter: blur(5px);'>".$road[$i][1]."<input name='roadname' value=".$road[$i][1]." style='visibility: hidden; width: 0px;'><button type='submit'>Открыть информацию о дороге</button></form><hr>";
         
         }
         echo $str;
