@@ -18,10 +18,11 @@
 
 
 <div class="container mt-4">
-    <h1>Добавление дороги</h1>
-    <form action="add.php" method="GET" style="background: rgba(110,85,132,0.58); padding-left: 20px; padding-right: 20px; border-radius: 10px; backdrop-filter: blur(7px) ">
+    
+    <form action="add.php" method="GET" style="background: rgba(110,85,132,0.58); padding-left: 20px; padding-right: 20px; border-radius: 10px; backdrop-filter: blur(7px); ">
         <!-- Road---------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
-        <h3>Основная информация</h3>
+        <h1 style="color: #fff">Добавление дороги</h1>
+        <h3 style="color: #fff">Основная информация</h3>
         <input type="text" class="form-control" name="roadname" id="roadname" placeholder="Введите название дороги"  autocomplete = "off" required autofocus><br>
         <input type="number" class="form-control" name="roadlength" id="roadlength" placeholder="Введите длину дороги"  autocomplete = "off" required><br>
         <input type="number" class="form-control" name="roadxstart" id="roadxstart" placeholder="Введите X координату начальной точки дороги"  autocomplete = "off" required><br>
@@ -29,19 +30,19 @@
         <input type="number" class="form-control" name="roadxend" id="roadxend" placeholder="Введите X координату конечной точки дороги"  autocomplete = "off" required><br>
         <input type="number" class="form-control" name="roadyend" id="roadyend" placeholder="Введите Y координату конечной точки дороги"  autocomplete = "off" required><br>
         <!-- Customer---------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
-        <h3>Информация о заказчике</h3>
+        <h3 style="color: #fff">Информация о заказчике</h3>
         <input type="text" class="form-control" name="customername" id="customername" placeholder="Введите имя заказчика"  autocomplete = "off" required><br>
         <input type="text" class="form-control" name="customersname" id="customersname" placeholder="Введите фамилию заказчика"  autocomplete = "off" required><br>
         <input type="email" class="form-control" name="customeremail" id="customeremail" placeholder="customeremail@gmail.com"  autocomplete = "off" required><br>
         <input type="tel" class="form-control" name="customerphone" id="customerphone" placeholder="Введите номер заказчика"  autocomplete = "off" required><br>
         <input type="text" class="form-control" name="customercompany" id="customercompany" placeholder="Введите компанию заказчика"  autocomplete = "off" required><br>
         <!-- Object---------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
-        <h3>Основная об объектах</h3>
+        <h3 style="color: #fff">Основная об объектах</h3>
         <input type="number" class="form-control" name="objectnum" id="objectnum" placeholder="Введите количество объектов вдоль дороги"  autocomplete = "off" required><br>
         <input type="number" class="form-control" name="objectstop" id="objectstop" placeholder="Введите количество остановок вдоль дороги"  autocomplete = "off" required><br>
         <input type="number" class="form-control" name="objectzebra" id="objectzebra" placeholder="Введите количество переходов вдоль дороги"  autocomplete = "off" required><br>
         <!-- Lcut---------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
-        <h3>Справочная информация</h3>
+        <h3 style="color: #fff">Справочная информация</h3>
         <input type="number" class="form-control" name="lcut" id="lcut" placeholder="Введите длинну самого большого отрезка"  autocomplete = "off" required><br>
         <!-- Scut---------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
         <input type="number" class="form-control" name="scut" id="scut" placeholder="Введите длинну самого маленького отрезка"  autocomplete = "off" required><br>
@@ -55,7 +56,7 @@
         <!-- Direction---------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
         <input type="text" class="form-control" name="directioncity" id="directioncity" placeholder="Введите направление дороги"  autocomplete = "off" required><br>
         <!-- Feedback---------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
-        <h3>Обратная связь</h3>
+        <h3 style="color: #fff">Обратная связь</h3>
         <input type="text" class="form-control" name="fbnotes" id="fbnotes" placeholder="Примечание для обратной связи"  autocomplete = "off" required><br>
         <input type="email" class="form-control" name="fbmail" id="fbmail" placeholder="feedback@gmail.com"  autocomplete = "off" required><br>
         <input type="tel" class="form-control" name="fbtel" id="fbtel" placeholder="Введите телефон для обратной связи"  autocomplete = "off" required><br>
