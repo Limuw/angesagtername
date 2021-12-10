@@ -51,9 +51,3 @@ body{
 select{
     width: 40% !important;
 }
-
-.background{
-    background: url(./background.jpg) !important;
-    background-size: 100% !important;
-    background-repeat: no-repeat !important;
-}
