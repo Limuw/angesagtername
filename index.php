@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body style="display:flex; padding-left: 30px; padding-right: 200px; column-gap: 50px; background: url(./background.jpg) !important;">
+<body style="display:flex; padding-left: 30px; padding-right: 200px; column-gap: 50px;">
 
 
 
