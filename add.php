@@ -93,7 +93,7 @@ $arr = [
     $resultCustomer = mysqli_query($conn, $sqlSelectCustomer);
     $customer = mysqli_fetch_all($resultCustomer);
 
-    $sqlInsertCustomer = 'INSERT INTO customer (id, name, sname, email, phone, company) VALUES ('.idGenerator(0,$customer).', \''.$_GET['customername'].'\', '.$_GET['customersname'].','.$_GET['customeremail'].', '.$_GET['customerphone'].', '.$_GET['customercompany'].')';
+    $sqlInsertCustomer = 'INSERT INTO customer (id, name, sname, email, phone, company) VALUES ('.idGenerator(0,$customer).', \''.$_GET['customername'].'\', '.$_GET['customersname'].',\''.$_GET['customeremail'].'\', '.$_GET['customerphone'].', '.$_GET['customercompany'].')';
     if ($conn->query($sqlInsertCustomer) === FALSE) {
       echo json_encode('Error: ' . $sqlInsertCustomer . '\n' . $conn->error);
      }
