@@ -19,7 +19,7 @@
 
 <div class="container mt-4">
     <h1>Добавление дороги</h1>
-    <form action="add.php" method="GET" style="background: rgba(24,181,164,0.5); padding-left: 20px; padding-right: 20px; border-radius: 10px">
+    <form action="add.php" method="GET" style="background: rgba(110,85,132,0.58); padding-left: 20px; padding-right: 20px; border-radius: 10px; backdrop-filter: blur(7px) ">
         <!-- Road---------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
         <h3>Основная информация</h3>
         <input type="text" class="form-control" name="roadname" id="roadname" placeholder="Введите название дороги"  autocomplete = "off" required autofocus><br>
