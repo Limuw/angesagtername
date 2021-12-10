@@ -11,7 +11,9 @@
 <body style="display:flex; padding-left: 30px; padding-right: 200px; column-gap: 50px; 
     background: url(./background.jpg) !important;
     background-size: 100% !important;
-    background-repeat: no-repeat !important;">
+    background-repeat: no-repeat !important;
+    background-attachment: fixed !important;
+    background-position: 0 0; !important">
 
 
 
