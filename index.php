@@ -86,7 +86,7 @@
         
         $str = '<div style="background: rgba(110,85,132,0.58); margin: 20px 20px; padding: 20px; border-radius: 10px; backdrop-filter: blur(5px);">'; 
         for($i=0; $i<count($road); $i++){
-            $str.="<form action='output.php'>".$road[$i][1]."<input name='roadname' value=".$road[$i][1]." style='visibility: hidden; width: 0px;'><button class='btn btn-success'; type='submit'>Открыть</button></form><hr>";
+            $str.="<form action='output.php'>".$road[$i][1]."<input name='roadname' value=".$road[$i][1]." style='visibility: hidden; width: 0px;'><button class='btn btn-alert'; type='submit'>Открыть</button></form><hr>";
         
         }
         $str.='</div>';
