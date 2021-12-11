@@ -30,13 +30,16 @@
 <body style="display:flex; padding-left: 30px; padding-right: 200px; column-gap: 50px;">
 <div class="container mt-4">
     <h1>Информация о дороге</h1>
-        <label><?php $road[0] ?></label><br>
+    <?php
+    print_r($road)
+    ?>
+        <!-- <label><?php $road[0] ?></label><br>
         <label><?php $road[1] ?></label><br>
         <label><?php $road[2] ?></label><br>
         <label><?php $road[3] ?></label><br>
         <label><?php $road[4] ?></label><br>
         <label><?php $road[5] ?></label><br>
-        <label><?php $road[6] ?></label><br>
+        <label><?php $road[6] ?></label><br> -->
 </div>  
     </body>    
 </html>
