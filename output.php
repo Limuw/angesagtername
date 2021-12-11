@@ -27,7 +27,7 @@
         $road = mysqli_fetch_all($resultRoad);
 
     ?>
-<body style="display:flex; padding-left: 30px; padding-right: 200px; column-gap: 50px;">
+<body style="display:flex; column-gap: 50px; background: rgba(110,85,132,0.58); padding-left: 20px; padding-right: 20px; border-radius: 10px; backdrop-filter: blur(5px);">
 <div class="container mt-4">
     <?php
     $str="<div>";
