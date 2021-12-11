@@ -22,7 +22,7 @@
         die('Connection failed: ' . $conn -> connect_error);
         }
 
-        $sqlSelectRoad = 'SELECT * FROM road WHERE roadname='.$_GET['roadname'].'';
+        $sqlSelectRoad = 'SELECT * FROM road WHERE name='.$_GET['roadname'].'';
         $resultRoad = mysqli_query($conn, $sqlSelectRoad);
         $road = mysqli_fetch_all($resultRoad);
 
