@@ -45,7 +45,7 @@
     echo $str
     ?>
 </div>
-<button class="btn btn-success" href="./index.php">На главную</button>  
+<a class="btn btn-success" href="./index.php">На главную</a>  
     </body>    
 </html>
 
