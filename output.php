@@ -27,7 +27,12 @@
         $road = mysqli_fetch_all($resultRoad);
 
     ?>
-<body style="display:flex; column-gap: 50px; background: rgba(110,85,132,0.58); padding-left: 20px; padding-right: 20px; border-radius: 10px; backdrop-filter: blur(5px);">
+<body style="display:flex; column-gap: 50px; background: rgba(110,85,132,0.58); padding-left: 20px; padding-right: 20px; border-radius: 10px; backdrop-filter: blur(5px);background: url(./background.jpg) !important;
+    background-size: 100% !important;
+    background-repeat: no-repeat !important;
+    background-attachment: fixed !important;
+    background-position: 0 0 !important">
+">
 <div class="container mt-4">
     <?php
     $str="<div>";
