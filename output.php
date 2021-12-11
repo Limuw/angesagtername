@@ -33,9 +33,13 @@
     $str="<div>";
     for($i=0; $i<count($road); $i++){
         $str.="<h1>Информация о дороге</h1>";
-        for($j=0; $j<count($road[$i]); $j++){
-        $str.="<label>".$road[$i][$j]."</label><br>";
-        }
+        $str.="<label>Номер дороги - ".$road[$i][0]."</label><br>";
+        $str.="<label>Название дороги - ".$road[$i][1]."</label><br>";
+        $str.="<label>Длина дороги - ".$road[$i][2]."</label><br>";
+        $str.="<label>Х начало - ".$road[$i][3]."</label><br>";
+        $str.="<label>Y начало - ".$road[$i][4]."</label><br>";
+        $str.="<label>Х конец - ".$road[$i][5]."</label><br>";
+        $str.="<label>Y конец - ".$road[$i][6]."</label><br>";
         $str.="<hr>";
     }
     echo $str
