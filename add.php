@@ -153,11 +153,11 @@ $arr = [
         echo json_encode('Error: ' . $sqlInsertTurn . '\n' . $conn->error);
      }
      //  Direction
-     $sqlSelectDirection = 'SELECT * FROM direction';
+    $sqlSelectDirection = 'SELECT * FROM direction';
     $resultDirection = mysqli_query($conn, $sqlSelectDirection);
     $direction = mysqli_fetch_all($resultDirection);
 
-    $sqlInsertDirection = 'INSERT INTO direction (id, city, ) VALUES ('.idGenerator(0,$Direction).', \''.$_GET['city'].' \')';
+    $sqlInsertDirection = 'INSERT INTO direction (id, city) VALUES ('.idGenerator(0,$direction).', \''.$_GET['city'].' \')';
     if ($conn->query($sqlInsertDirection) === FALSE) {
         echo json_encode('Error: ' . $sqlInsertDirection . '\n' . $conn->error);
      }
