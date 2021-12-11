@@ -29,17 +29,17 @@
     ?>
 <body style="display:flex; padding-left: 30px; padding-right: 200px; column-gap: 50px;">
 <div class="container mt-4">
-    <h1>Информация о дороге</h1>
     <?php
-    print_r($road)
+    $str="<div>";
+    for($i=0; $i<count($road); $i++){
+        $str.="<h1>Информация о дороге</h1>";
+        for($j=0; $j<count($road[$i]); $j++){
+        $str.="<label>".$road[$i][$j]."</label><br>";
+        }
+        $str.="<hr>";
+    }
+    echo $str
     ?>
-        <!-- <label><?php $road[0] ?></label><br>
-        <label><?php $road[1] ?></label><br>
-        <label><?php $road[2] ?></label><br>
-        <label><?php $road[3] ?></label><br>
-        <label><?php $road[4] ?></label><br>
-        <label><?php $road[5] ?></label><br>
-        <label><?php $road[6] ?></label><br> -->
 </div>  
     </body>    
 </html>
